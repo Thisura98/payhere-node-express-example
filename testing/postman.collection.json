@@ -1,0 +1,214 @@
+{
+    "info": {
+        "_postman_id": "2aa1a863-556c-4f09-9e37-48254fbf25d3",
+        "name": "PayHere Node Example",
+        "description": "Use this Postman Collection to locally test your PayHere Implementation.\n\nThis Collection has two scenarios that you can test.\n\n1. Onetime Success\n2. Onetime Failed",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Onetime Success",
+            "id": "b1e04acd-779e-4d7d-be21-42621ee397be",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "User-Agent",
+                        "value": "Apache-HttpClient/4.5.2 (Java/1.8.0_221)",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "merchant_id",
+                            "value": "1211149",
+                            "type": "text"
+                        },
+                        {
+                            "key": "payment_id",
+                            "value": "320029929066",
+                            "type": "text"
+                        },
+                        {
+                            "key": "order_id",
+                            "value": "TO10000",
+                            "type": "text"
+                        },
+                        {
+                            "key": "payhere_amount",
+                            "value": "100.00",
+                            "type": "text"
+                        },
+                        {
+                            "key": "captured_amount",
+                            "value": "100.00",
+                            "type": "text"
+                        },
+                        {
+                            "key": "payhere_currency",
+                            "value": "LKR",
+                            "type": "text"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "2",
+                            "type": "text"
+                        },
+                        {
+                            "key": "md5sig",
+                            "value": "FFB12EFFAA5A31B2D73089C34EB05F58",
+                            "type": "text"
+                        },
+                        {
+                            "key": "custom_1",
+                            "value": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "custom_2",
+                            "value": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "method",
+                            "value": "VISA",
+                            "type": "text"
+                        },
+                        {
+                            "key": "status_message",
+                            "value": "Successfully received the VISA payment",
+                            "type": "text"
+                        },
+                        {
+                            "key": "card_holder_name",
+                            "value": "A. B. CHATHURANGA",
+                            "type": "text"
+                        },
+                        {
+                            "key": "card_no",
+                            "value": "************1234",
+                            "type": "text"
+                        },
+                        {
+                            "key": "card_expiry",
+                            "value": "1224",
+                            "type": "text"
+                        },
+                        {
+                            "key": "recurring",
+                            "value": "0",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": "localhost:8080/payhere/notify",
+                "description": "Use this request to simulate a __Successful__ Onetime Payment Request with your Server."
+            },
+            "response": []
+        },
+        {
+            "name": "Onetime Failed",
+            "id": "a1d2bcd3-ca5a-48fb-bf97-58c5e76afd88",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "User-Agent",
+                        "value": "Apache-HttpClient/4.5.2 (Java/1.8.0_221)",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "merchant_id",
+                            "value": "1211149",
+                            "type": "text"
+                        },
+                        {
+                            "key": "order_id",
+                            "value": "TO10000",
+                            "type": "text"
+                        },
+                        {
+                            "key": "payment_id",
+                            "value": "0",
+                            "type": "text"
+                        },
+                        {
+                            "key": "payhere_amount",
+                            "value": "100.00",
+                            "type": "text"
+                        },
+                        {
+                            "key": "captured_amount",
+                            "value": "100.00",
+                            "type": "text"
+                        },
+                        {
+                            "key": "payhere_currency",
+                            "value": "LKR",
+                            "type": "text"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "-2",
+                            "type": "text"
+                        },
+                        {
+                            "key": "md5sig",
+                            "value": "20042F319A9E9ADDE4A64146F66FA87D",
+                            "type": "text"
+                        },
+                        {
+                            "key": "custom_1",
+                            "value": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "custom_2",
+                            "value": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "method",
+                            "value": "VISA",
+                            "type": "text"
+                        },
+                        {
+                            "key": "status_message",
+                            "value": "Restricted card, decline",
+                            "type": "text"
+                        },
+                        {
+                            "key": "card_holder_name",
+                            "value": "A. B. CHATHURANGA",
+                            "type": "text"
+                        },
+                        {
+                            "key": "card_no",
+                            "value": "************1234",
+                            "type": "text"
+                        },
+                        {
+                            "key": "card_expiry",
+                            "value": "1224",
+                            "type": "text"
+                        },
+                        {
+                            "key": "recurring",
+                            "value": "0",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": "localhost:8080/payhere/notify",
+                "description": "Use this request to simulate a __Failed__ Onetime Payment Request with your Server."
+            },
+            "response": []
+        }
+    ]
+}
