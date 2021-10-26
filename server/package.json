@@ -1,0 +1,24 @@
+{
+  "name": "ls",
+  "version": "1.0.0",
+  "description": "An example of accepting the PayHere Payment Notification using Node JS and Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thisura98/payhere-node-express-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thisura98/payhere-node-express-example/issues"
+  },
+  "homepage": "https://github.com/Thisura98/payhere-node-express-example#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "md5": "^2.3.0",
+    "nodemon": "^2.0.14"
+  }
+}
